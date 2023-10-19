@@ -109,6 +109,7 @@ public class FIleRepository : IFileService
 
         var dto = new FileDto
         {
+            Id = currentfile.Id.ToString(),
             FileName = currentfile.FileName,
             FileSize = currentfile.FileSize,
             FileType = currentfile.FileType,
@@ -131,6 +132,7 @@ public class FIleRepository : IFileService
             .Select(currentfile =>
                 new FileDto
                 {
+                    Id = currentfile.Id.ToString(),
                     FileName = currentfile.FileName,
                     FileSize = currentfile.FileSize,
                     FileType = currentfile.FileType,

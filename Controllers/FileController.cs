@@ -21,7 +21,7 @@ public class FileController:ControllerBase
 
         //saves file For Current Logged user 
     [HttpPost("upload")]
-    public async Task<IActionResult> UploadFiles([FromBody] List<IFormFile> files)
+    public async Task<IActionResult> UploadFiles([FromForm] List<IFormFile> files)
     {
         if (files.IsNullOrEmpty()) return BadRequest("Select At least 1 file");
          
@@ -40,7 +40,7 @@ public class FileController:ControllerBase
     }
 
     //Gets File By Id 
-    [HttpGet("id")]
+    [HttpGet("{id}")]
     public  IActionResult  GetFileById(Guid id)
     {
         var result = _FileRepository.GetFileById(id);

@@ -8,7 +8,9 @@ public class User:IdentityUser<Guid>
     [JsonIgnore]
     public List<FileMetadata> files { get; set; }
     
+    public string? RefreshToken { get; set; }
     
+    public DateTime? RefreshTokenExp { get; set; }
     
     
 }
