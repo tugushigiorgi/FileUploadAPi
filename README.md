@@ -7,13 +7,8 @@ This ASP.NET Core Web API project provides endpoints to upload and manage files,
 ## Table of Contents
 
 1. [Requirements](#requirements)
-2. [Getting Started](#getting-started)
-   - [Database Setup](#database-setup)
-   - [Running the API](#running-the-api)
-3. [API Endpoints](#api-endpoints)
-4. [JWT Authentication](#jwt-authentication)
-5. [Configuration](#configuration)
-6. [License](#license)
+2. [Database Setup](#database-setup)
+
 
 ## Requirements
 
@@ -29,15 +24,8 @@ This ASP.NET Core Web API project provides endpoints to upload and manage files,
 ## IMPORTANT
 -- update appsettings.json FileUploadURL , this is where uploaded files will be saved
 
-
-## API ENDPOINTS
-
--- user/register For registration 
-
---/auth/login for login
--- /file/upload upload 1 or more files same time
---file/id get file by id
---file/all get current logged user all files 
+## INCLUDES SWAGGER
+ 
 
 
 
