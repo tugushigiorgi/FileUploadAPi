@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -36,7 +37,16 @@ builder.Services.AddDbContext<FileDbContext>(options =>
 //             policy.AllowAnyMethod();
 //         });
 // });
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "API",
+        Version = "v1",
+    });
 
+    
+});
 
 
 //repositories
@@ -76,7 +86,7 @@ builder.Services.AddAuthentication(options =>
 
 );
 
-
+builder.Services.AddAuthorization();
 
 builder.Services.AddIdentity<User, UserRole>(options=>
     {
@@ -97,8 +107,16 @@ options.Password.RequireDigit = true;
 
 
 var app = builder.Build();
-
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
+   
+});
+app.UseStaticFiles();
+app.UseRouting();
+app.UseCors();
+app.UseAuthentication();
+app.UseAuthorization();
 app.MapControllers();
-
-
 app.Run();
