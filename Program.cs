@@ -24,19 +24,18 @@ builder.Services.AddDbContext<FileDbContext>(options =>
 
 );
 
-//Uncomment IF u use Frontend framework(React,Vue,Angular...) and specify that port 
-// builder.Services.AddCors(options =>
-// {
-//     options.AddPolicy("Policy",
-//         policy =>
-//         {
-//             policy.WithOrigins("https://localhost:5166", "http://localhost:5166");
-//             policy.SetIsOriginAllowed(origin => true);
-//             policy.AllowAnyOrigin();
-//             policy.AllowAnyHeader();
-//             policy.AllowAnyMethod();
-//         });
-// });
+ builder.Services.AddCors(options =>
+{
+    options.AddPolicy("Policy",
+        policy =>
+        {
+            policy.WithOrigins("https://localhost:5000", "http://localhost:5166");
+            policy.SetIsOriginAllowed(origin => true);
+            policy.AllowAnyOrigin();
+            policy.AllowAnyHeader();
+            policy.AllowAnyMethod();
+        });
+});
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo

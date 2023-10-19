@@ -65,7 +65,7 @@ public class FileController:ControllerBase
 
     }
 
-    
+    [NonAction]
     public Guid? GetLoggedUserId()
     {
          

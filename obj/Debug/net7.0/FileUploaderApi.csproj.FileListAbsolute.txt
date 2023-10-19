@@ -79,3 +79,8 @@ C:\Users\Giorgi Tughushi\RiderProjects\FileUploaderApi\FileUploaderApi\obj\Debug
 C:\Users\Giorgi Tughushi\RiderProjects\FileUploaderApi\FileUploaderApi\obj\Debug\net7.0\FileUploaderApi.pdb
 C:\Users\Giorgi Tughushi\RiderProjects\FileUploaderApi\FileUploaderApi\obj\Debug\net7.0\FileUploaderApi.genruntimeconfig.cache
 C:\Users\Giorgi Tughushi\RiderProjects\FileUploaderApi\FileUploaderApi\obj\Debug\net7.0\ref\FileUploaderApi.dll
+C:\Users\Giorgi Tughushi\RiderProjects\FileUploaderApi\FileUploaderApi\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\Giorgi Tughushi\RiderProjects\FileUploaderApi\FileUploaderApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Giorgi Tughushi\RiderProjects\FileUploaderApi\FileUploaderApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Giorgi Tughushi\RiderProjects\FileUploaderApi\FileUploaderApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Giorgi Tughushi\RiderProjects\FileUploaderApi\FileUploaderApi\obj\Debug\net7.0\FileUploaderApi.MvcApplicationPartsAssemblyInfo.cs
